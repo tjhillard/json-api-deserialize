@@ -257,22 +257,28 @@ exports[`JsonApiDeserializer Resource Response (3) RO data object contains neste
 Object {
   "data": Object {
     "attributes": Object {
-      "name": "Mercer Island Books",
+      "created_at": "2019-06-30T22:33:41+0000",
+      "name": "Mercer Island Book Store",
+      "updated_at": "2019-06-30T22:33:41+0000",
     },
     "id": "1",
     "relationships": Object {
       "owner": Object {
         "data": Object {
           "attributes": Object {
-            "name": "John Stamos",
+            "created_at": "2019-06-30T22:33:41+0000",
+            "full_name": "John Doe",
+            "updated_at": "2019-06-30T22:33:41+0000",
           },
           "id": "2",
           "relationships": Object {
             "address": Object {
               "data": Object {
                 "attributes": Object {
-                  "street": "123 San Fran Baby Ave",
+                  "created_at": "2019-06-30T22:33:41+0000",
+                  "street": "123 Test Ave",
                   "type": "commercial",
+                  "updated_at": "2019-06-30T22:33:41+0000",
                   "zip_code": "12345",
                 },
                 "id": "3",
@@ -280,7 +286,9 @@ Object {
                   "driveway": Object {
                     "data": Object {
                       "attributes": Object {
-                        "type": "The fancy circle type with a fountain in the middle",
+                        "created_at": "2019-06-30T22:33:41+0000",
+                        "type": "parking_lot",
+                        "updated_at": "2019-06-30T22:33:41+0000",
                       },
                       "id": "4",
                       "type": "driveway",
@@ -295,7 +303,7 @@ Object {
         },
       },
     },
-    "type": "building",
+    "type": "book",
   },
   "deserialized": true,
 }

@@ -170,22 +170,30 @@ Object {
 exports[`JsonApiDeserializer Resource Response (3) RO data object contains nested full resource objects 1`] = `
 Object {
   "data": Object {
+    "createdAt": "2019-06-30T22:33:41+0000",
     "id": "1",
-    "name": "Mercer Island Books",
+    "name": "Mercer Island Book Store",
     "owner": Object {
       "address": Object {
+        "createdAt": "2019-06-30T22:33:41+0000",
         "driveway": Object {
+          "createdAt": "2019-06-30T22:33:41+0000",
           "id": "4",
-          "type": "The fancy circle type with a fountain in the middle",
+          "type": "parking_lot",
+          "updatedAt": "2019-06-30T22:33:41+0000",
         },
         "id": "3",
-        "street": "123 San Fran Baby Ave",
+        "street": "123 Test Ave",
         "type": "commercial",
+        "updatedAt": "2019-06-30T22:33:41+0000",
         "zipCode": "12345",
       },
+      "createdAt": "2019-06-30T22:33:41+0000",
+      "fullName": "John Doe",
       "id": "2",
-      "name": "John Stamos",
+      "updatedAt": "2019-06-30T22:33:41+0000",
     },
+    "updatedAt": "2019-06-30T22:33:41+0000",
   },
   "deserialized": true,
 }
