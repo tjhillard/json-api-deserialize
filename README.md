@@ -1,11 +1,11 @@
 # json-api-utils
 
-All of the horrible deserialization code you didn't want to have to write to effeciently handle JSON:API data on the frontend.
+All of the painful deserialization code you didn't want to have to write to efficiently handle JSON:API data on the frontend.
 
-* Nests included resources
-* Normalizes data structures
-* Converts all object keys to camelCased values
-* TypeScript typings
+* Nests included resources 🕸
+* Normalizes data structures 🏗
+* Converts all object keys to camelCased values 🐫
+* TypeScript typings 👌
 
 ## Raw
 ```json
@@ -78,35 +78,35 @@ All of the horrible deserialization code you didn't want to have to write to eff
 ```
 
 ## Deserialized
-```json
+```js
 {
-  "data": {
-    "id": "1",
-    "name": "Mercer Island Book Store",
-    "createdAt": "2019-06-30T22:33:41+0000",
-    "updatedAt": "2019-06-30T22:33:41+0000",
-    "owner": {
-      "id": "2",
-      "fullName": "John Doe",
-      "createdAt": "2019-06-30T22:33:41+0000",
-      "updatedAt": "2019-06-30T22:33:41+0000",
-      "address": {
-        "id": "3",
-        "street": "123 Test Ave",
-        "type": "commercial",
-        "zipCode": "12345",
-        "createdAt": "2019-06-30T22:33:41+0000",
-        "updatedAt": "2019-06-30T22:33:41+0000",
-        "driveway": {
-          "id": "4",
-          "type": "parking_lot",
-          "createdAt": "2019-06-30T22:33:41+0000",
-          "updatedAt": "2019-06-30T22:33:41+0000"
+  data: {
+    id: '1',
+    name: 'Mercer Island Book Store',
+    createdAt: '2019-06-30T22:33:41+0000',
+    updatedAt: '2019-06-30T22:33:41+0000',
+    owner: {
+      id: '2',
+      fullName: 'John Doe',
+      createdAt: '2019-06-30T22:33:41+0000',
+      updatedAt: '2019-06-30T22:33:41+0000',
+      address: {
+        id: '3',
+        street: '123 Test Ave',
+        type: 'commercial',
+        zipCode: '12345',
+        createdAt: '2019-06-30T22:33:41+0000',
+        updatedAt: '2019-06-30T22:33:41+0000',
+        driveway: {
+          id: '4',
+          type: 'parking_lot',
+          createdAt: '2019-06-30T22:33:41+000',
+          updatedAt: '2019-06-30T22:33:41+0000',
         }
       }
     }
   },
-  "deserialized": true
+  deserialized: true
 }
 ```
 
