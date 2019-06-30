@@ -1,0 +1,24 @@
+{
+  "data": {
+    "type": "building",
+    "id": "1",
+    "attributes": {
+      "name": "Mercer Island Books"
+    },
+    "relationships": {
+      "owner": {
+        "id": "2",
+        "name": "John Stamos",
+        "address": {
+          "id": "3",
+          "street": "123 San Fran Baby Ave",
+          "driveway": {
+            "id": "4",
+            "type": "The fancy circle type with a fountain in the middle"
+          }
+        }
+      }
+    }
+  },
+  "deserialized": true
+}

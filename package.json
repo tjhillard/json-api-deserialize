@@ -1,0 +1,19 @@
+{
+  "name": "json-api-deserializer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TJ Hillard",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.135",
+    "lodash": "^4.17.11"
+  }
+}

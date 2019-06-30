@@ -1,0 +1,56 @@
+{
+  "data": {
+    "type": "building",
+    "id": "1",
+    "attributes": {
+      "name": "Mercer Island Books"
+    },
+    "relationships": {
+      "owner": {
+        "data": {
+          "id": "2",
+          "type": "owner"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "type": "owner",
+      "id": "2",
+      "attributes": {
+        "name": "John Stamos"
+      },
+      "relationships": {
+        "address": {
+          "data": {
+            "id": "3",
+            "type": "address"
+          }
+        }
+      }
+    },
+    {
+      "type": "address",
+      "id": "3",
+      "attributes": {
+        "street": "123 San Fran Baby Ave"
+      },
+      "relationships": {
+        "driveway": {
+          "data": {
+            "id": "4",
+            "type": "driveway"
+          }
+        }
+      }
+    },
+    {
+      "type": "driveway",
+      "id": "4",
+      "attributes": {
+        "type": "The fancy circle type with a fountain in the middle"
+      }
+    }
+  ]
+}
