@@ -1,1 +1,5 @@
-export { deserialize, getNestedResource } from './packages';
+export {
+	deserialize,
+	normalize,
+	getNestedResource,
+} from './packages';

@@ -1,22 +1,23 @@
-import { get, set, isObject } from 'lodash';
+import { get, set } from 'lodash';
 import { asArray } from '../../utils'
 
 import IDocument from '../../meta/document.interface';
 import IResource from '../../meta/resource.interface';
 import IResourceIdentifier from '../../meta/resource-identifier.interface';
 import IDeserialized from '../../meta/deserialized.interface';
+import { normalize } from '../normalizer/normalizer.func';
 
 class Deserializer {
   private response: IDocument;
   private deserialized: IDeserialized;
 
-  public getDeserialized(response: IDocument, options: any) {
+  public getDeserialized(response: IDocument, options: any = { normalize: true }): IDeserialized | IDocument {
     this.response = response; // Keep an instance copy of the raw response
     this.deserialized = <IDeserialized>response; // The object to modify that will get returned
 
     try {
       if (!response || !response.included) {
-        return this.getReturnObject(false);
+        return this.getReturnObject(false, options);
       }
 
       const resourceAsArray: IResource[] = asArray(response.data);
@@ -24,11 +25,8 @@ class Deserializer {
       for (const [index, resource] of resourceAsArray.entries()) {
         this.mapResources(resource, index);
       }
-      if (options.normalize) {
-        this.normalize();
-      }
 
-      return this.getReturnObject(true);
+      return this.getReturnObject(true, options);
     } catch (err) {
       return this.response;
     }
@@ -96,60 +94,17 @@ class Deserializer {
     }
   }
 
-  private normalize() {
-    const eachRecursively = (object: any): void => {
-      for (const key in object) {
-        let attrs, relationships, data;
-
-        if (object.id && object.type) {
-          delete object.type;
-        }
-
-        if (object.attributes) {
-          attrs = object.attributes;
-        }
-
-        if (object.relationships) {
-          relationships = object.relationships;
-        }
-
-        if (object.data) {
-          data = object.data;
-        }
-
-        if (attrs) {
-          delete object.attributes;
-          Object.assign(object, attrs);
-          eachRecursively(object);
-        }
-
-        if (relationships) {
-          delete object.relationships;
-          Object.assign(object, relationships);
-          eachRecursively(object);
-        }
-
-        if (data) {
-          delete object.data;
-          Object.assign(object, data);
-          eachRecursively(object);
-        }
-
-        if (isObject(object[key])) {
-          eachRecursively(object[key]);
-        }
-      }
-    };
-
-    eachRecursively(this.deserialized.data);
-  }
-
-  private getReturnObject(wasDeserialized: boolean) {
+  private getReturnObject(wasDeserialized: boolean, options: any) {
     this.deserialized.deserialized = wasDeserialized;
     if (wasDeserialized) {
       delete this.deserialized.included;
     }
-    return this.deserialized;
+
+    if (wasDeserialized && options.normalize) {
+      return normalize(this.deserialized);
+    } else {
+      return this.deserialized;
+    }
   }
 }
 

@@ -34,7 +34,9 @@
       "type": "address",
       "id": "3",
       "attributes": {
-        "street": "123 San Fran Baby Ave"
+        "street": "123 San Fran Baby Ave",
+        "type": "commercial",
+        "zip_code": "12345"
       },
       "relationships": {
         "driveway": {
