@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonApiDeserializer Collection Response (1) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "attributes": Object {
+        "created_at": "2019-05-09T15:28:44.000Z",
+        "name": "Hogwarts Varsity Quidditch Team 2019",
+        "updated_at": "2019-06-24T17:49:16.000Z",
+      },
+      "id": "123",
+      "relationships": Object {
+        "contact": Object {
+          "data": Object {
+            "id": "11650",
+            "type": "contact",
+          },
+        },
+        "events": Object {
+          "data": Array [
+            Object {
+              "attributes": Object {
+                "created_at": "2019-06-05T02:06:54.000Z",
+                "name": "Training with Prof Snape",
+                "status": "active",
+                "updated_at": "2019-06-21T18:30:25.000Z",
+              },
+              "id": "351978",
+              "type": "event",
+            },
+            Object {
+              "attributes": Object {
+                "created_at": "2019-06-05T02:06:54.000Z",
+                "name": "Training with Prof Snape 2",
+                "status": "pending",
+                "updated_at": "2019-06-21T18:30:25.000Z",
+              },
+              "id": "351979",
+              "type": "event",
+            },
+          ],
+        },
+        "organization": Object {
+          "data": Object {
+            "attributes": Object {
+              "created_at": "2018-11-20T21:41:49.000Z",
+              "name": "Hogwarts Academy",
+              "updated_at": "2019-06-24T18:35:19.000Z",
+            },
+            "id": "19925",
+            "relationships": Object {
+              "address": Object {
+                "data": Object {
+                  "attributes": Object {
+                    "abbreviated_region": "wa",
+                    "city": "Dufftown",
+                    "country": "Scotland",
+                    "created_at": "2017-12-20T22:23:58.000Z",
+                    "region": "Scottish Highlands",
+                    "street": "123 Banffshire Ave",
+                    "updated_at": "2017-12-20T22:23:58.000Z",
+                    "zip": "12345",
+                  },
+                  "id": "27284",
+                  "type": "address",
+                },
+              },
+            },
+            "type": "organization",
+          },
+        },
+      },
+      "type": "fundraiser",
+    },
+    Object {
+      "attributes": Object {
+        "created_at": "2019-05-09T15:28:44.000Z",
+        "name": "Hogwarts JV Quidditch Team 2019",
+        "updated_at": "2019-06-24T17:49:16.000Z",
+      },
+      "id": "1234",
+      "relationships": Object {
+        "contact": Object {
+          "data": Object {
+            "id": "11651",
+            "type": "contact",
+          },
+        },
+        "events": Object {
+          "data": Array [
+            Object {
+              "attributes": Object {
+                "created_at": "2019-06-05T02:06:54.000Z",
+                "name": "Training with Prof Snape 2",
+                "status": "active",
+                "updated_at": "2019-06-21T18:30:25.000Z",
+              },
+              "id": "351980",
+              "type": "event",
+            },
+            Object {
+              "attributes": Object {
+                "created_at": "2019-06-05T02:06:54.000Z",
+                "name": "Training with Prof Snape 3",
+                "status": "pending",
+                "updated_at": "2019-06-21T18:30:25.000Z",
+              },
+              "id": "351981",
+              "type": "event",
+            },
+          ],
+        },
+        "organization": Object {
+          "data": Object {
+            "attributes": Object {
+              "created_at": "2018-11-20T21:41:49.000Z",
+              "name": "Hogwarts Academy 2",
+              "updated_at": "2019-06-24T18:35:19.000Z",
+            },
+            "id": "19926",
+            "relationships": Object {
+              "address": Object {
+                "data": Object {
+                  "attributes": Object {
+                    "abbreviated_region": "oh",
+                    "city": "Dufftown 2",
+                    "country": "Scotland 2",
+                    "created_at": "2017-12-20T22:23:58.000Z",
+                    "region": "Scottish Highlands 2",
+                    "street": "124 Banffshire Ave",
+                    "updated_at": "2017-12-20T22:23:58.000Z",
+                    "zip": "12346",
+                  },
+                  "id": "27285",
+                  "type": "address",
+                },
+              },
+            },
+            "type": "organization",
+          },
+        },
+      },
+      "type": "fundraiser",
+    },
+  ],
+  "deserialized": true,
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (1) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "created_at": "2019-05-09T15:28:44.000Z",
+      "name": "Hogwarts Varsity Quidditch Team 2019",
+      "updated_at": "2019-06-24T17:49:16.000Z",
+    },
+    "id": "123",
+    "relationships": Object {
+      "contact": Object {
+        "data": Object {
+          "id": "11650",
+          "type": "contact",
+        },
+      },
+      "events": Object {
+        "data": Array [
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-05T02:06:54.000Z",
+              "name": "Training with Prof Snape",
+              "status": "active",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "351978",
+            "type": "event",
+          },
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-05T02:06:54.000Z",
+              "name": "Training with Prof Snape 2",
+              "status": "pending",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "351979",
+            "type": "event",
+          },
+        ],
+      },
+      "organization": Object {
+        "data": Object {
+          "attributes": Object {
+            "created_at": "2018-11-20T21:41:49.000Z",
+            "name": "Hogwarts Academy",
+            "updated_at": "2019-06-24T18:35:19.000Z",
+          },
+          "id": "19925",
+          "relationships": Object {
+            "address": Object {
+              "data": Object {
+                "attributes": Object {
+                  "abbreviated_region": "wa",
+                  "city": "Dufftown",
+                  "country": "Scotland",
+                  "created_at": "2017-12-20T22:23:58.000Z",
+                  "region": "Scottish Highlands",
+                  "street": "123 Banffshire Ave",
+                  "updated_at": "2017-12-20T22:23:58.000Z",
+                  "zip": "12345",
+                },
+                "id": "27284",
+                "type": "address",
+              },
+            },
+          },
+          "type": "organization",
+        },
+      },
+    },
+    "type": "fundraiser",
+  },
+  "deserialized": true,
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (2) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "body": "The shortest article. Ever.",
+      "created_at": "2015-05-22T14:56:29.000Z",
+      "title": "JSON:API paints my bikeshed!",
+      "updated_at": "2015-05-22T14:56:28.000Z",
+    },
+    "id": "1",
+    "relationships": Object {
+      "author": Object {
+        "data": Object {
+          "attributes": Object {
+            "age": 80,
+            "gender": "male",
+            "name": "John",
+          },
+          "id": "42",
+          "type": "people",
+        },
+      },
+    },
+    "type": "articles",
+  },
+  "deserialized": true,
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (3) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "name": "Mercer Island Books",
+    },
+    "id": "1",
+    "relationships": Object {
+      "owner": Object {
+        "data": Object {
+          "attributes": Object {
+            "name": "John Stamos",
+          },
+          "id": "2",
+          "relationships": Object {
+            "address": Object {
+              "data": Object {
+                "attributes": Object {
+                  "street": "123 San Fran Baby Ave",
+                  "type": "commercial",
+                  "zip_code": "12345",
+                },
+                "id": "3",
+                "relationships": Object {
+                  "driveway": Object {
+                    "data": Object {
+                      "attributes": Object {
+                        "type": "The fancy circle type with a fountain in the middle",
+                      },
+                      "id": "4",
+                      "type": "driveway",
+                    },
+                  },
+                },
+                "type": "address",
+              },
+            },
+          },
+          "type": "owner",
+        },
+      },
+    },
+    "type": "building",
+  },
+  "deserialized": true,
+}
+`;
