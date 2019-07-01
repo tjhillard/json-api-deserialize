@@ -1,4 +1,4 @@
-# json-api-deserialzier
+# json-api-client-deserialzier
 
 All of the painful deserialization code you didn't want to have to write to efficiently handle JSON:API data on the frontend.
 

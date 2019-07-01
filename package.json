@@ -1,7 +1,19 @@
 {
-  "name": "json-api-deserializer",
+  "name": "json-api-client-deserializer",
   "version": "0.0.0",
   "description": "",
+  "keywords": [
+    "json",
+    "api",
+    "jsonapi",
+    "deserializer",
+    "serializler",
+    "normalizer",
+    "deserialize",
+    "normalize",
+    "client",
+    "utils"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
