@@ -1,8 +1,9 @@
 {
-  "name": "json-api-client-deserializer",
-  "version": "0.0.0",
+  "name": "json-api-deserialize",
+  "version": "0.0.0-alpha.0",
   "description": "",
   "keywords": [
+    "json:api",
     "json",
     "api",
     "jsonapi",
@@ -22,10 +23,10 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "@types/lodash": "^4.14.135"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.135",
     "lodash": "^4.17.11"
   }
 }

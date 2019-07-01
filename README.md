@@ -1,11 +1,12 @@
-# json-api-client-deserialzier
+# json-api-deserialize
 
 All of the painful deserialization code you didn't want to have to write to efficiently handle JSON:API data on the frontend.
 
-* Nests included resources 🕸
+* Nests included objects on resources 🕸
 * Normalizes data structures 🏗
 * Converts all object keys to camelCased values 🐫
 * TypeScript typings 👌
+* Compliant with JSON:API v1.0 Spec 📜
 
 ## Raw
 ```json
@@ -105,15 +106,15 @@ All of the painful deserialization code you didn't want to have to write to effi
         }
       }
     }
-  },
-  deserialized: true
+  }
+  deserialized: true,
 }
 ```
 
 Pair with Axios interceptors for a seamless experience.
 
 ```js
-import { deserialize } from 'json-api-utils';
+import { deserialize } from 'json-api-deserialize';
 
 axios.interceptors.response.use((response) => {
     return {
@@ -137,10 +138,10 @@ const fetchBookstore = async () => {
 #### Deserialize
 
 ```ts
-deserialize(rawJsonApiDocument, options?): deserializedResponseObject;
+deserialize(rawJsonApiDocument, options?): deserializedResponseObject | rawJsonApiDocument;
 ```
 
-Options:
+**Options:**
 
 * Normalize (boolean, default: true)
 	* Flattens the deserialized response object to spread `attributes` and `relationships` properties to the same level as `id`

@@ -1,4 +1,1 @@
-export {
-	deserialize,
-	normalize,
-} from './packages';
+export { deserialize } from './packages';
