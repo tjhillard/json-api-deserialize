@@ -7,12 +7,16 @@ import IDocument from '../../meta/document.interface';
 import IResource from '../../meta/resource.interface';
 import IResourceIdentifier from '../../meta/resource-identifier.interface';
 import IDeserialized from '../../meta/deserialized.interface';
+import IDeserializeOptions from 'src/meta/deserialize-options.interface';
 
 class Deserializer {
   private response: IDocument;
   private deserialized: IDeserialized;
 
-  public getDeserialized(response: IDocument, options: any = { normalize: true }): IDeserialized | IDocument {
+  public getDeserialized(
+    response: IDocument,
+    options: IDeserializeOptions = { normalize: true }
+  ): IDeserialized | IDocument {
     this.response = response; // Keep an instance copy of the raw response
     this.deserialized = <IDeserialized>response; // The object to modify that will get returned
 
