@@ -1,6 +1,6 @@
 {
   "name": "json-api-deserialize",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.1",
   "description": "A deserializer for JSON:API responses",
   "keywords": [
     "json:api",
