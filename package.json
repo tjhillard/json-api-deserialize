@@ -1,7 +1,7 @@
 {
   "name": "json-api-deserialize",
   "version": "0.0.0-alpha.0",
-  "description": "",
+  "description": "A deserializer for JSON:API responses",
   "keywords": [
     "json:api",
     "json",
@@ -15,7 +15,7 @@
     "client",
     "utils"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

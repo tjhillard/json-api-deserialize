@@ -308,3 +308,30 @@ Object {
   "deserialized": true,
 }
 `;
+
+exports[`JsonApiDeserializer Resource Response (4) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "body": "The shortest article. Ever.",
+      "created_at": "2015-05-22T14:56:29.000Z",
+      "title": "JSON:API paints my bikeshed!",
+      "updated_at": "2015-05-22T14:56:28.000Z",
+    },
+    "id": "1",
+    "relationships": Object {
+      "author": Object {
+        "data": Object {
+          "id": "42",
+          "type": "people",
+        },
+      },
+    },
+    "type": "articles",
+  },
+  "deserialized": true,
+  "meta": Object {
+    "foo": "bar",
+  },
+}
+`;

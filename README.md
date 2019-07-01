@@ -133,6 +133,15 @@ const fetchBookstore = async () => {
 };
 ```
 
+## Install
+
+```
+yarn add json-api-deserialize
+```
+```
+npm i json-api-deserialize
+```
+
 ## API
 
 #### Deserialize
@@ -146,3 +155,5 @@ deserialize(rawJsonApiDocument, options?): deserializedResponseObject | rawJsonA
 * Normalize (boolean, default: true)
 	* Flattens the deserialized response object to spread `attributes` and `relationships` properties to the same level as `id`
 	* Converts all object keys to camelCase variants
+
+`deserialize` returns a deserialized response object and falls back to the raw response object if an exception is caught.

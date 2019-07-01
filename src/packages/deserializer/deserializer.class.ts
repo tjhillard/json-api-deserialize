@@ -18,7 +18,7 @@ class Deserializer {
 
     try {
       if (!response || !response.included) {
-        return this.getReturnObject(false, options);
+        return this.getReturnObject(true, options);
       }
 
       const resourceAsArray: IResource[] = asArray(response.data);

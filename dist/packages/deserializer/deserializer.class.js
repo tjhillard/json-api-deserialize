@@ -39,7 +39,7 @@ var Deserializer = (function () {
         this.deserialized = response;
         try {
             if (!response || !response.included) {
-                return this.getReturnObject(false, options);
+                return this.getReturnObject(true, options);
             }
             var resourceAsArray = utils_1.asArray(response.data);
             try {
