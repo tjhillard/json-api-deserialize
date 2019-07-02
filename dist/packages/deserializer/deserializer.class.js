@@ -33,8 +33,8 @@ var Deserializer = (function () {
     function Deserializer() {
     }
     Deserializer.prototype.getDeserialized = function (response, options) {
-        if (options === void 0) { options = { normalize: true }; }
         var e_1, _a;
+        if (options === void 0) { options = { normalize: true }; }
         this.response = response;
         this.deserialized = response;
         try {
@@ -87,7 +87,7 @@ var Deserializer = (function () {
             };
             var this_1 = this;
             try {
-                for (var resourceIdentifiers_1 = __values(resourceIdentifiers), resourceIdentifiers_1_1 = resourceIdentifiers_1.next(); !resourceIdentifiers_1_1.done; resourceIdentifiers_1_1 = resourceIdentifiers_1.next()) {
+                for (var resourceIdentifiers_1 = (e_2 = void 0, __values(resourceIdentifiers)), resourceIdentifiers_1_1 = resourceIdentifiers_1.next(); !resourceIdentifiers_1_1.done; resourceIdentifiers_1_1 = resourceIdentifiers_1.next()) {
                     var resourceIdentifier = resourceIdentifiers_1_1.value;
                     _loop_1(resourceIdentifier);
                 }

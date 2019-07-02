@@ -16,15 +16,20 @@
     "utils"
   ],
   "main": "dist/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --verbose",
+    "test:watch": "jest --watchAll",
+    "build": "tsc -p tsconfig.json"
   },
   "author": "TJ Hillard",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.135",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "typescript": "^3.5.2",
-    "@types/lodash": "^4.14.135"
+    "typescript": "^3.5.2"
   },
   "dependencies": {
     "lodash": "^4.17.11"

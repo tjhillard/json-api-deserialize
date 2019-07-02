@@ -13,7 +13,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "rootDir": "src"
   },
   "exclude": ["dist", "node_modules"]
 }

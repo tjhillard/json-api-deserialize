@@ -5,8 +5,9 @@ All of the painful deserialization code you didn't want to have to write to effi
 * Nests included objects on resources 🕸
 * Normalizes data structures 🏗
 * Converts all object keys to camelCased values 🐫
-* TypeScript typings 👌
+* Written in TypeScript 🎉
 * Compliant with JSON:API v1.0 Spec 📜
+* Rigorously tested 🔬
 
 ## Raw
 ```json

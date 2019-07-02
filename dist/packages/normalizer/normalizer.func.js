@@ -18,7 +18,7 @@ exports.normalize = function (deserializedData) {
             var attrs = void 0, relationships = void 0, data = void 0;
             if (lodash_1.isArray(object[key])) {
                 try {
-                    for (var _b = __values(object[key]), _c = _b.next(); !_c.done; _c = _b.next()) {
+                    for (var _b = (e_1 = void 0, __values(object[key])), _c = _b.next(); !_c.done; _c = _b.next()) {
                         var objInArray = _c.value;
                         if (objInArray.type) {
                             delete objInArray.type;
