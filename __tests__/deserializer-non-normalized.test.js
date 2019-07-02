@@ -59,4 +59,26 @@ describe('JsonApiDeserializer', () => {
       });
     });
   });
+
+  describe('When given unexpected RO values', () => {
+    const givenAndExpectedReturns = [
+      { given: null, expected: null },
+      { given: undefined, expected: undefined },
+      { given: 0, expected: 0 },
+      { given: '', expected: '' },
+      { given: '0', expected: '0' },
+      { given: {}, expected: { deserialized: true } },
+      { given: { foo: 'bongo' }, expected: { foo: 'bongo', deserialized: true } },
+    ];
+
+    test('it safely handles and returns the given value', () => {
+      givenAndExpectedReturns.forEach((obj) => {
+        expect(() => {
+          deserialize(obj.given);
+        }).not.toThrowError();
+
+        expect(deserialize(obj.given)).toEqual(obj.expected);
+      });
+    });
+  });
 });
