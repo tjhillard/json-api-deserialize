@@ -12,7 +12,7 @@ All of the painful deserialization code you didn't want to have to write to effi
 ```json
 {
   "data": {
-    "type": "book",
+    "type": "store",
     "id": "1",
     "attributes": {
       "name": "Mercer Island Book Store",
@@ -128,8 +128,8 @@ axios.interceptors.response.use((response) => {
 
 ```js
 const fetchBookstore = async () => {
-  const { data: bookstore } = await get('/bookstore?inclue=owner');
-  console.log(bookstore.owner.fullName); // 👉 John Doe
+  const { data: store } = await get('/store/1?inclue=owner');
+  console.log(store.owner.fullName); // 👉 John Doe
 };
 ```
 
