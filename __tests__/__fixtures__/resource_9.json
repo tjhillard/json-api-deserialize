@@ -1,0 +1,105 @@
+{
+  "data": {
+    "id": "40628",
+    "type": "campaign",
+    "attributes": {
+      "updated_at": "2019-06-28T21:39:18.000Z",
+      "created_at": "2019-05-09T15:28:44.000Z",
+      "name": "Hogwarts Academy Girl's Varsity Quidditch"
+    },
+    "relationships": {
+      "person": {
+        "data": {
+          "id": "123",
+          "type": "person"
+        }
+      },
+      "academy": {
+        "data": {
+          "id": "321",
+          "type": "academy"
+        }
+      },
+      "events": {
+        "data": [
+          {
+            "id": "321",
+            "type": "event"
+          },
+          {
+            "id": "432",
+            "type": "event"
+          },
+          {
+            "id": "543",
+            "type": "event"
+          },
+          {
+            "id": "654",
+            "type": "event"
+          }
+        ]
+      },
+      "fundraiser": {
+        "data": null
+      },
+      "coach": {
+        "data": {
+          "id": "2219",
+          "type": "coach"
+        }
+      },
+      "financial_account": {
+        "data": {
+          "id": "111",
+          "type": "financial_account"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "321",
+      "type": "event",
+      "attributes": {
+        "updated_at": "2019-06-21T18:30:25.000Z",
+        "created_at": "2019-06-05T02:06:54.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "432",
+      "type": "event",
+      "attributes": {
+        "updated_at": "2019-06-21T18:30:25.000Z",
+        "created_at": "2019-06-05T02:06:54.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "543",
+      "type": "event",
+      "attributes": {
+        "updated_at": "2019-06-21T18:30:25.000Z",
+        "created_at": "2019-06-05T02:06:54.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "654",
+      "type": "event",
+      "attributes": {
+        "updated_at": "2019-06-21T18:30:25.000Z",
+        "created_at": "2019-06-20T00:17:40.000Z",
+        "status": "active"
+      }
+    },
+    {
+      "id": "2219",
+      "type": "coach",
+      "attributes": {
+        "nickname": "Coach K"
+      }
+    }
+  ]
+}
