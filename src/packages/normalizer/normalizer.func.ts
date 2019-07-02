@@ -25,7 +25,7 @@ export const normalize = (deserializedData: IDeserialized): IDeserialized => {
 
       // Assign data/attributes/relationships to temp variable
       // so they can be spread on to the current object cleanly
-      if (object[key].data) {
+      if (object[key] && object[key].data) {
         data = object[key].data;
       }
 

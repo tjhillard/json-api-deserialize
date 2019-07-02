@@ -42,29 +42,31 @@ class Deserializer {
       const resourceIdentifiers: IResourceIdentifier[] = asArray(resource.relationships[resourceRelationshipKey].data);
 
       for (const resourceIdentifier of resourceIdentifiers) {
-        const includedResourceObject = this.response.included.find((included) => {
-          return included.id === resourceIdentifier.id
-        && included.type === resourceIdentifier.type;
-        });
+        if (resourceIdentifier && resourceIdentifier.id && resourceIdentifier.type) {
+          const includedResourceObject = this.response.included.find((included) => {
+            return included.id === resourceIdentifier.id
+          && included.type === resourceIdentifier.type;
+          });
 
-        if (includedResourceObject) {
-          if (Array.isArray(this.response.data)) {
-            this.setNestedResourceOnIdentifierObject(
-              nestedObjectPath
-                ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
-                : null
-            || `data[${indexInCollection}]relationships[${resourceRelationshipKey}].data`,
-              includedResourceObject,
-              indexInCollection,
-            );
-          } else {
-            this.setNestedResourceOnIdentifierObject(
-              nestedObjectPath
-                ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
-                : null
-            || `data.relationships[${resourceRelationshipKey}].data`,
-              includedResourceObject,
-            );
+          if (includedResourceObject) {
+            if (Array.isArray(this.response.data)) {
+              this.setNestedResourceOnIdentifierObject(
+                nestedObjectPath
+                  ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
+                  : null
+              || `data[${indexInCollection}]relationships[${resourceRelationshipKey}].data`,
+                includedResourceObject,
+                indexInCollection,
+              );
+            } else {
+              this.setNestedResourceOnIdentifierObject(
+                nestedObjectPath
+                  ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
+                  : null
+              || `data.relationships[${resourceRelationshipKey}].data`,
+                includedResourceObject,
+              );
+            }
           }
         }
       }

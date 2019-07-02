@@ -13,6 +13,7 @@ const resourceResponses = [
   require('./__fixtures__/resource_6.json'),
   require('./__fixtures__/resource_7.json'),
   require('./__fixtures__/resource_8.json'),
+  require('./__fixtures__/resource_9.json'),
 ];
 
 const collectionResponses = [

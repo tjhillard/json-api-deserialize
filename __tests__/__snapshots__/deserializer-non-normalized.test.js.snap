@@ -488,3 +488,90 @@ Object {
   "deserialized": true,
 }
 `;
+
+exports[`JsonApiDeserializer Resource Response (9) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "created_at": "2019-05-09T15:28:44.000Z",
+      "name": "Hogwarts Academy Girl's Varsity Quidditch",
+      "updated_at": "2019-06-28T21:39:18.000Z",
+    },
+    "id": "40628",
+    "relationships": Object {
+      "academy": Object {
+        "data": Object {
+          "id": "321",
+          "type": "academy",
+        },
+      },
+      "coach": Object {
+        "data": Object {
+          "attributes": Object {
+            "nickname": "Coach K",
+          },
+          "id": "2219",
+          "type": "coach",
+        },
+      },
+      "events": Object {
+        "data": Array [
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-05T02:06:54.000Z",
+              "status": "active",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "321",
+            "type": "event",
+          },
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-05T02:06:54.000Z",
+              "status": "active",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "432",
+            "type": "event",
+          },
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-05T02:06:54.000Z",
+              "status": "active",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "543",
+            "type": "event",
+          },
+          Object {
+            "attributes": Object {
+              "created_at": "2019-06-20T00:17:40.000Z",
+              "status": "active",
+              "updated_at": "2019-06-21T18:30:25.000Z",
+            },
+            "id": "654",
+            "type": "event",
+          },
+        ],
+      },
+      "financial_account": Object {
+        "data": Object {
+          "id": "111",
+          "type": "financial_account",
+        },
+      },
+      "fundraiser": Object {
+        "data": null,
+      },
+      "person": Object {
+        "data": Object {
+          "id": "123",
+          "type": "person",
+        },
+      },
+    },
+    "type": "campaign",
+  },
+  "deserialized": true,
+}
+`;
