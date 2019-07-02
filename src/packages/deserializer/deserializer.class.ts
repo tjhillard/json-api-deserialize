@@ -45,7 +45,7 @@ class Deserializer {
         if (resourceIdentifier && resourceIdentifier.id && resourceIdentifier.type) {
           const includedResourceObject = this.response.included.find((included) => {
             return included.id === resourceIdentifier.id
-          && included.type === resourceIdentifier.type;
+              && included.type === resourceIdentifier.type;
           });
 
           if (includedResourceObject) {
@@ -85,7 +85,7 @@ class Deserializer {
       if (Array.isArray(resourceIdObject)) {
         const resourceIdObjectIndex: number = resourceIdObject.findIndex((identifierObject) => {
           return identifierObject.id === includedResourceObject.id
-          && identifierObject.type === includedResourceObject.type;
+            && identifierObject.type === includedResourceObject.type;
         });
 
         fullPath = fullPath + `[${resourceIdObjectIndex}]`;

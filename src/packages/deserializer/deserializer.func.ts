@@ -4,7 +4,7 @@ import IDeserializeOptions from 'src/meta/deserialize-options.interface';
 
 /**
  *
- * Function wrapper for deserializer class
+ * Takes a raw JSON:API document and returns the deserialized version.
  *
  */
 export const deserialize = (response: IDocument, options?: IDeserializeOptions) => {

@@ -2,7 +2,7 @@ import { isObject, isArray, camelCase } from 'lodash';
 import IDeserialized from "src/meta/deserialized.interface";
 
 export const normalize = (deserializedData: IDeserialized): IDeserialized => {
-  const normalizeGivenObject = (object: any): void => {
+  const normalizeGivenObject = (object: any): void => { // eslint-disable-line
     for (const key in object) {
       let attrs, relationships, data;
 
@@ -42,6 +42,7 @@ export const normalize = (deserializedData: IDeserialized): IDeserialized => {
         }
       }
 
+      // Set attributes & relationships to local variable
       if (object.attributes) {
         attrs = object.attributes;
       }
@@ -50,6 +51,7 @@ export const normalize = (deserializedData: IDeserialized): IDeserialized => {
         relationships = object.relationships;
       }
 
+      // Spread attributes/relationships local variable values onto current object
       if (attrs) {
         delete object.attributes;
         Object.assign(object, attrs);
@@ -62,9 +64,8 @@ export const normalize = (deserializedData: IDeserialized): IDeserialized => {
         normalizeGivenObject(object);
       }
 
-      // Changes all object key values to camelCase variants
+      // Convert all object key values to camelCase variants
       const keyToCamelCase = camelCase(key);
-
       if (key !== keyToCamelCase) {
         Object.defineProperty(object, keyToCamelCase, Object.getOwnPropertyDescriptor(object, key));
         delete object[key];
