@@ -15,7 +15,7 @@ class Deserializer {
 
   public getDeserialized(
     response: IDocument,
-    options: IDeserializeOptions = { normalize: true }
+    options: IDeserializeOptions = { normalize: true },
   ): IDeserialized | IDocument {
     this.response = response; // Keep an instance copy of the raw response
     this.deserialized = <IDeserialized>response; // The object to modify that will get returned
