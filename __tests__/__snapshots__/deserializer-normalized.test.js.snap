@@ -14,7 +14,6 @@ Object {
           "id": "351978",
           "name": "Training with Prof Snape",
           "status": "active",
-          "type": "event",
           "updatedAt": "2019-06-21T18:30:25.000Z",
         },
         Object {
@@ -22,7 +21,6 @@ Object {
           "id": "351979",
           "name": "Training with Prof Snape 2",
           "status": "pending",
-          "type": "event",
           "updatedAt": "2019-06-21T18:30:25.000Z",
         },
       ],
@@ -45,7 +43,6 @@ Object {
         "name": "Hogwarts Academy",
         "updatedAt": "2019-06-24T18:35:19.000Z",
       },
-      "type": "fundraiser",
       "updatedAt": "2019-06-24T17:49:16.000Z",
     },
     Object {
@@ -59,7 +56,6 @@ Object {
           "id": "351980",
           "name": "Training with Prof Snape 2",
           "status": "active",
-          "type": "event",
           "updatedAt": "2019-06-21T18:30:25.000Z",
         },
         Object {
@@ -67,7 +63,6 @@ Object {
           "id": "351981",
           "name": "Training with Prof Snape 3",
           "status": "pending",
-          "type": "event",
           "updatedAt": "2019-06-21T18:30:25.000Z",
         },
       ],
@@ -90,8 +85,61 @@ Object {
         "name": "Hogwarts Academy 2",
         "updatedAt": "2019-06-24T18:35:19.000Z",
       },
-      "type": "fundraiser",
       "updatedAt": "2019-06-24T17:49:16.000Z",
+    },
+  ],
+  "deserialized": true,
+}
+`;
+
+exports[`JsonApiDeserializer Collection Response (2) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "author": Object {
+        "firstName": "Dan",
+        "id": "9",
+        "lastName": "Gebhardt",
+        "links": Object {
+          "self": "http://example.com/people/9",
+        },
+        "twitter": "dgeb",
+        "type": "human",
+      },
+      "comments": Array [
+        Object {
+          "author": Object {
+            "id": "2",
+          },
+          "body": "First!",
+          "id": "5",
+          "links": Object {
+            "self": "http://example.com/comments/5",
+          },
+        },
+        Object {
+          "author": Object {
+            "firstName": "Dan",
+            "id": "9",
+            "lastName": "Gebhardt",
+            "links": Object {
+              "self": "http://example.com/people/9",
+            },
+            "twitter": "dgeb",
+            "type": "human",
+          },
+          "body": "I like XML better",
+          "id": "12",
+          "links": Object {
+            "self": "http://example.com/comments/12",
+          },
+        },
+      ],
+      "id": "1",
+      "links": Object {
+        "self": "http://example.com/articles/1",
+      },
+      "title": "JSON:API paints my bikeshed!",
     },
   ],
   "deserialized": true,
@@ -111,7 +159,6 @@ Object {
         "id": "351978",
         "name": "Training with Prof Snape",
         "status": "active",
-        "type": "event",
         "updatedAt": "2019-06-21T18:30:25.000Z",
       },
       Object {
@@ -119,7 +166,6 @@ Object {
         "id": "351979",
         "name": "Training with Prof Snape 2",
         "status": "pending",
-        "type": "event",
         "updatedAt": "2019-06-21T18:30:25.000Z",
       },
     ],

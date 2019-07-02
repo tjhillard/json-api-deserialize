@@ -9,6 +9,10 @@ export const normalize = (deserializedData: IDeserialized): IDeserialized => {
 			// Handle collections
 			if (isArray(object[key])) {
 				for (const objInArray of object[key]) {
+					if (objInArray.type) {
+						delete objInArray.type;
+					}
+
 					normalizeGivenObject(objInArray);
 				}
 			}

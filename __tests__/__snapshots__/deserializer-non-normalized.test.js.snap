@@ -148,6 +148,98 @@ Object {
 }
 `;
 
+exports[`JsonApiDeserializer Collection Response (2) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "attributes": Object {
+        "title": "JSON:API paints my bikeshed!",
+      },
+      "id": "1",
+      "links": Object {
+        "self": "http://example.com/articles/1",
+      },
+      "relationships": Object {
+        "author": Object {
+          "data": Object {
+            "attributes": Object {
+              "first-name": "Dan",
+              "last-name": "Gebhardt",
+              "twitter": "dgeb",
+              "type": "human",
+            },
+            "id": "9",
+            "links": Object {
+              "self": "http://example.com/people/9",
+            },
+            "type": "people",
+          },
+          "links": Object {
+            "related": "http://example.com/articles/1/author",
+            "self": "http://example.com/articles/1/relationships/author",
+          },
+        },
+        "comments": Object {
+          "data": Array [
+            Object {
+              "attributes": Object {
+                "body": "First!",
+              },
+              "id": "5",
+              "links": Object {
+                "self": "http://example.com/comments/5",
+              },
+              "relationships": Object {
+                "author": Object {
+                  "data": Object {
+                    "id": "2",
+                    "type": "people",
+                  },
+                },
+              },
+              "type": "comments",
+            },
+            Object {
+              "attributes": Object {
+                "body": "I like XML better",
+              },
+              "id": "12",
+              "links": Object {
+                "self": "http://example.com/comments/12",
+              },
+              "relationships": Object {
+                "author": Object {
+                  "data": Object {
+                    "attributes": Object {
+                      "first-name": "Dan",
+                      "last-name": "Gebhardt",
+                      "twitter": "dgeb",
+                      "type": "human",
+                    },
+                    "id": "9",
+                    "links": Object {
+                      "self": "http://example.com/people/9",
+                    },
+                    "type": "people",
+                  },
+                },
+              },
+              "type": "comments",
+            },
+          ],
+          "links": Object {
+            "related": "http://example.com/articles/1/comments",
+            "self": "http://example.com/articles/1/relationships/comments",
+          },
+        },
+      },
+      "type": "articles",
+    },
+  ],
+  "deserialized": true,
+}
+`;
+
 exports[`JsonApiDeserializer Resource Response (1) RO data object contains nested full resource objects 1`] = `
 Object {
   "data": Object {

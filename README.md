@@ -128,7 +128,7 @@ axios.interceptors.response.use((response) => {
 
 ```js
 const fetchBookstore = async () => {
-  const { data: store } = await get('/store/1?inclue=owner');
+  const { data: store } = await get('/store/1?include=owner');
   console.log(store.owner.fullName); // 👉 John Doe
 };
 ```

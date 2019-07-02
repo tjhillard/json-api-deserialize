@@ -20,6 +20,9 @@ exports.normalize = function (deserializedData) {
                 try {
                     for (var _b = __values(object[key]), _c = _b.next(); !_c.done; _c = _b.next()) {
                         var objInArray = _c.value;
+                        if (objInArray.type) {
+                            delete objInArray.type;
+                        }
                         normalizeGivenObject(objInArray);
                     }
                 }

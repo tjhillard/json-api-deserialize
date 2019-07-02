@@ -13,6 +13,7 @@ const resourceResponses = [
 
 const collectionResponses = [
   require('./__fixtures__/collection_1.json'),
+  require('./__fixtures__/collection_2.json'),
 ];
 
 describe('JsonApiDeserializer', () => {
