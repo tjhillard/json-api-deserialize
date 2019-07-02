@@ -9,6 +9,10 @@ const resourceResponses = [
   require('./__fixtures__/resource_2.json'),
   require('./__fixtures__/resource_3.json'),
   require('./__fixtures__/resource_4.json'),
+  require('./__fixtures__/resource_5.json'),
+  require('./__fixtures__/resource_6.json'),
+  require('./__fixtures__/resource_7.json'),
+  require('./__fixtures__/resource_8.json'),
 ];
 
 const collectionResponses = [
@@ -31,7 +35,7 @@ describe('JsonApiDeserializer', () => {
       });
 
       test('RO shouldn\'t have included property', () => {
-        expect(deserializedResponse.data.included).toBeFalsy();
+        expect(deserializedResponse.included).toBeFalsy();
       });
     });
   });
@@ -50,7 +54,7 @@ describe('JsonApiDeserializer', () => {
       });
 
       test('RO shouldn\'t have included property', () => {
-        expect(deserializedResponse.data.included).toBeFalsy();
+        expect(deserializedResponse.included).toBeFalsy();
       });
     });
   });

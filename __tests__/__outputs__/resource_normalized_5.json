@@ -1,0 +1,1 @@
+{"links":{"self":"http://example.com/articles/1"},"data":{"id":"1","title":"JSON:API paints my bikeshed!","author":{"links":{"related":"http://example.com/articles/1/author"}}},"deserialized":true}

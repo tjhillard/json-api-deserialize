@@ -427,3 +427,64 @@ Object {
   },
 }
 `;
+
+exports[`JsonApiDeserializer Resource Response (5) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "title": "JSON:API paints my bikeshed!",
+    },
+    "id": "1",
+    "relationships": Object {
+      "author": Object {
+        "links": Object {
+          "related": "http://example.com/articles/1/author",
+        },
+      },
+    },
+    "type": "articles",
+  },
+  "deserialized": true,
+  "links": Object {
+    "self": "http://example.com/articles/1",
+  },
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (6) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": null,
+  "deserialized": true,
+  "links": Object {
+    "self": "http://example.com/articles/1/author",
+  },
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (7) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Array [],
+  "deserialized": true,
+  "links": Object {
+    "related": "/articles/1/tags",
+    "self": "/articles/1/relationships/tags",
+  },
+}
+`;
+
+exports[`JsonApiDeserializer Resource Response (8) RO data object contains nested full resource objects 1`] = `
+Object {
+  "data": Object {
+    "attributes": Object {
+      "src": "http://example.com/images/productivity.png",
+      "title": "Ember Hamster",
+    },
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "links": Object {
+      "self": "http://example.com/photos/550e8400-e29b-41d4-a716-446655440000",
+    },
+    "type": "photos",
+  },
+  "deserialized": true,
+}
+`;
