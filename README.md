@@ -1,6 +1,11 @@
 # json-api-deserialize
 
-All of the painful deserialization code you didn't want to have to write to efficiently handle JSON:API data on the frontend.
+![CircleCI branch](https://img.shields.io/circleci/project/github/tjhillard/json-api-deserialize/master.svg)
+[![npm version](https://badge.fury.io/js/json-api-deserialize.svg)](https://badge.fury.io/js/json-api-deserialize)
+![npm](https://img.shields.io/npm/dt/json-api-deserialize.svg)
+![NPM](https://img.shields.io/npm/l/json-api-deserialize.svg)
+
+Massively simplifies the process of working with JSON:API data on the frontend.
 
 * Nests included objects on resources 🕸
 * Normalizes data structures 🏗
