@@ -18,7 +18,7 @@ class Deserializer {
     options: IDeserializeOptions = { normalize: true },
   ): IDeserialized | IDocument {
     this.response = response; // Keep an instance copy of the raw response
-    this.deserialized = <IDeserialized>response; // The object to modify that will get returned
+    this.deserialized = response as IDeserialized; // The object to modify that will get returned
 
     try {
       if (!response || !response.included) {
@@ -44,7 +44,7 @@ class Deserializer {
       for (const resourceIdentifier of resourceIdentifiers) {
         const includedResourceObject = this.response.included.find((included) => {
           return included.id === resourceIdentifier.id
-            && included.type === resourceIdentifier.type;
+        && included.type === resourceIdentifier.type;
         });
 
         if (includedResourceObject) {
@@ -53,7 +53,7 @@ class Deserializer {
               nestedObjectPath
                 ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
                 : null
-                || `data[${indexInCollection}]relationships[${resourceRelationshipKey}].data`,
+            || `data[${indexInCollection}]relationships[${resourceRelationshipKey}].data`,
               includedResourceObject,
               indexInCollection,
             );
@@ -62,7 +62,7 @@ class Deserializer {
               nestedObjectPath
                 ? nestedObjectPath + `.relationships[${resourceRelationshipKey}].data`
                 : null
-                || `data.relationships[${resourceRelationshipKey}].data`,
+            || `data.relationships[${resourceRelationshipKey}].data`,
               includedResourceObject,
             );
           }
@@ -83,7 +83,7 @@ class Deserializer {
       if (Array.isArray(resourceIdObject)) {
         const resourceIdObjectIndex: number = resourceIdObject.findIndex((identifierObject) => {
           return identifierObject.id === includedResourceObject.id
-            && identifierObject.type === includedResourceObject.type;
+          && identifierObject.type === includedResourceObject.type;
         });
 
         fullPath = fullPath + `[${resourceIdObjectIndex}]`;
@@ -99,7 +99,7 @@ class Deserializer {
     }
   }
 
-  private getReturnObject(wasDeserialized: boolean, options: any) {
+  private getReturnObject(wasDeserialized: boolean, options: IDeserializeOptions) {
     this.deserialized.deserialized = wasDeserialized;
     if (wasDeserialized) {
       delete this.deserialized.included;

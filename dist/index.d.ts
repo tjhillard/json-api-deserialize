@@ -1,1 +1,0 @@
-export { deserialize } from './packages';

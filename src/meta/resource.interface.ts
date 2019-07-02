@@ -7,7 +7,7 @@ export default interface IResource {
   type: string;
   attributes?: object; // IAttributesObject
   relationships?: {
-    [key: string]: IRelationships
+    [key: string]: IRelationships;
   }; // IRelationshipsObject
   links?: object; // ILinksObject
   meta?: object; // IMetaObject

@@ -19,6 +19,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
+    "lint": "eslint .",
     "test:ci": "jest --verbose",
     "test:watch": "jest --watchAll",
     "build": "tsc -p tsconfig.json"
@@ -27,6 +28,9 @@
   "license": "MIT",
   "devDependencies": {
     "@types/lodash": "^4.14.135",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "typescript": "^3.5.2"

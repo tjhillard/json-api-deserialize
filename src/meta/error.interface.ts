@@ -1,5 +1,5 @@
 export default interface IError {
-  id?: any;
+  id?: any; // JSON:API spec just says "a unique identifier"
   links?: {
     about?: string;
   };
